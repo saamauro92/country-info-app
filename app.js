@@ -1,14 +1,13 @@
 const express = require("express");
-const bodyParser = require("./middleware/bodyParser");
-const routes = require("./routes");
-const port = 8080;
-
 const app = express();
-
+const bodyParser = require("./middleware/bodyParser");
 bodyParser(app);
+const routes = require("./routes");
+
 
 app.use("/", routes);
 
-app.listen(port, () => {
-  console.log(`app listening in port ${port}`);
-});
+
+module.exports = app;
+
+

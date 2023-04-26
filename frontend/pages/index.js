@@ -1,13 +1,13 @@
 import axios from "axios";
 import { useState } from "react";
-import Search from "../components/Search";
 import DisplayMessage from "../components/DisplayMessage";
 import Loading from "../components/Loading";
 import CountryInfo from "../components/CountryInfo";
 import Layout from "../components/_App/Layout";
+import Search from "../components/Search";
 
 export default function Home() {
-  const [searchInput, setSearchInput] = useState("argentina");
+  const [searchInput, setSearchInput] = useState("");
   const [countryData, setCountryData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [displayMessage, setDisplayMessage] = useState("");

@@ -8,7 +8,8 @@ const Search = ({ handleSubmit, handleInputChange, searchInput }) => {
         type="text"
         value={searchInput}
         onChange={(e) => handleInputChange(e)}
-        className="px-4 py-2 rounded-l-lg w-full focus:outline-none focus:ring  border-[1px]  "
+        className="px-4 py-2 rounded-l-lg w-full focus:outline-none focus:ring  border-[1px]"
+        placeholder="Search country"
         required
       />
       <button

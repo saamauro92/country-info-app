@@ -6,7 +6,7 @@ const getCountryData = async (country) => {
       `https://restcountries.com/v3.1/name/${country}?fullText=true`
     );
 
-    return { status: 200, data: response.data };
+    return { status: 200, data: response.data[0] };
   } catch (error) {
     if (error.response) {
       return {

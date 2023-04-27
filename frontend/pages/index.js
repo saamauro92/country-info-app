@@ -4,7 +4,7 @@ import DisplayMessage from "../components/DisplayMessage";
 import Loading from "../components/Loading";
 import CountryInfo from "../components/CountryInfo";
 import Layout from "../components/_App/Layout";
-import Search from "../components/Search";
+
 
 export default function Home() {
   const [searchInput, setSearchInput] = useState("");
@@ -51,7 +51,7 @@ export default function Home() {
       {isLoading ? (
         <Loading/>
       ) : countryData ? (
-        <CountryInfo data={...countryData}/>
+        <CountryInfo data={countryData}/>
       ) : (
       
         <DisplayMessage displayMessage={displayMessage} />

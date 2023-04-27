@@ -38,6 +38,7 @@ This is a Next.js application that communicates with the backend API to display 
 
 -   Node.js installed on your machine.
 -   An API URL for the backend server.
+-   An GOOGLE API MAP KEY for map displaying
 
 ### Installation
 

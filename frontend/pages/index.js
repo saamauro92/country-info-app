@@ -19,19 +19,24 @@ export default function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    const response = await axios.get(
-      `${process.env.NEXT_PUBLIC_API_URL}/country/${searchInput}`
-    );
-
-    if (response.data.status === 200) {
-      const { data } = response.data;
-      setCountryData(data);
-      setDisplayMessage("");
-      setIsLoading(false);
-    } else if (response.data.status !== 200) {
+    try {
+      const response = await axios.get(
+        `${process.env.NEXT_PUBLIC_API_URL}/country/${searchInput}`
+      );
+      if (response.data.status === 200) {
+        const { data } = response.data;
+        setCountryData(data);
+        setDisplayMessage("");
+        setIsLoading(false);
+      } else if (response.data.status !== 200) {
+        setIsLoading(false);
+        setCountryData(null);
+        setDisplayMessage(`${response.data.error}`);
+      }
+    } catch (error) {
       setIsLoading(false);
       setCountryData(null);
-      setDisplayMessage(`${response.data.error}`);
+      setDisplayMessage("Sorry something went wrong");
     }
   };
 

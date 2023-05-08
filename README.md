@@ -4,7 +4,7 @@
 
 The backend app is deployed on Heroku and can be accessed at [https://country-app.herokuapp.com/](https://country-app.herokuapp.com/).
 
-The frontend app is deployed on Vercel and can be accessed at [https://internship-project-nu.vercel.app/](https://internship-project-nu.vercel.app/).
+The frontend app is deployed on Vercel and can be accessed at [https://country-info-app-nu.vercel.app/](https://country-info-app-nu.vercel.app/).
 
 ## Backend
 
